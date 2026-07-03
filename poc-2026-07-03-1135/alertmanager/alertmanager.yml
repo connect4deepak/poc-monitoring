@@ -1,0 +1,16 @@
+global:
+  smtp_smarthost: 'smtp.example.com:587'
+  smtp_from: 'alertmanager@example.com'
+  smtp_auth_username: 'alertmanager'
+  smtp_auth_password: 'password'
+route:
+  receiver: team-a
+  group_by: ['alertname']
+receivers:
+  - name: team-a
+    email_configs:
+    - to: team-a@example.com
+      from: alertmanager@example.com
+      smarthost: smtp.example.com:587
+      auth_username: alertmanager
+      auth_password: password
