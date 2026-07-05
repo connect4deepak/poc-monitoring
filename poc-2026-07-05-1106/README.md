@@ -1,0 +1,12 @@
+# Monitoring Stack POC
+
+This is a proof of concept for a monitoring stack using Prometheus, Alertmanager, and Docker Compose.
+
+## Files
+- `prometheus/prometheus.yml`
+- `prometheus/alert_rules.yml`
+- `alertmanager/alertmanager.yml`
+- `docker-compose.yml`
+
+---
+* on 2026-07-05*
