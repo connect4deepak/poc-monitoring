@@ -1,0 +1,10 @@
+groups:
+  - name: node_rules
+    rules:
+      - alert: NodeDown
+        expr: up == 0
+        for: 5m
+        labels:
+          severity: critical
+        annotations:
+          description: 'Node {{ $labels.instance }} is down'
